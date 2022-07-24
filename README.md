@@ -1,6 +1,6 @@
 # petkit
 
-A minimalistic Python solution to control Petkit pet feeder. Inspired by this [repository](
+A minimalistic Python solution to control [Petkit](https://petkit.com/) pet feeder. Inspired by [Petkit for HomeAssistant](
 https://github.com/hasscc/petkit/tree/ec1733f6ac563b0881bcd367eddcd7281e15a036).
 
 ## Setup Instructions
