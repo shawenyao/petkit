@@ -30,7 +30,7 @@ day = datetime.datetime.today().strftime('%Y%m%d')
 amount = 5 # smallest amount
 response_feed = s.get(
     f"http://api.petkt.com/latest/feedermini/save_dailyfeed?deviceId={device_id}&day={day}&time=-1&amount={amount}",
-     headers=headers
+    headers=headers
 )
 
 # close session
