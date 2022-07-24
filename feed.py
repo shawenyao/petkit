@@ -20,7 +20,6 @@ headers = {
 }
 response_login = s.get(f'https://api.petkt.com/latest/user/login?username={username}&password={password}', headers=headers)
 
-
 # get device info
 headers['X-Session'] = response_login.json()['result']['session']['id']
 response_device = s.get('https://api.petkt.com/latest/discovery/device_roster', headers=headers)
