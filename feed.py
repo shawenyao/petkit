@@ -29,3 +29,6 @@ response_feed = s.get(
     f"http://api.petkt.com/latest/feedermini/save_dailyfeed?deviceId={response_device.json()['result']['devices'][0]['data']['id']}&day={datetime.datetime.today().strftime('%Y%m%d')}&time=-1&amount=5",
      headers=headers
 )
+
+# close session
+s.close()
