@@ -25,8 +25,11 @@ headers['X-Session'] = response_login.json()['result']['session']['id']
 response_device = s.get('https://api.petkt.com/latest/discovery/device_roster', headers=headers)
 
 # feed
+device_id = response_device.json()['result']['devices'][0]['data']['id']
+day = datetime.datetime.today().strftime('%Y%m%d')
+amount = 5 # smallest amount
 response_feed = s.get(
-    f"http://api.petkt.com/latest/feedermini/save_dailyfeed?deviceId={response_device.json()['result']['devices'][0]['data']['id']}&day={datetime.datetime.today().strftime('%Y%m%d')}&time=-1&amount=5",
+    f"http://api.petkt.com/latest/feedermini/save_dailyfeed?deviceId={device_id}&day={day}&time=-1&amount={amount}",
      headers=headers
 )
 
