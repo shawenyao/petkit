@@ -14,6 +14,7 @@ s = requests.Session()
 # login
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'X-Api-Version': '7.29.1',
     'Accept-Language': 'en-US,en;'
 }
 response_login = s.get(f'https://api.petkt.com/latest/user/login?username={username}&password={password}', headers=headers)
